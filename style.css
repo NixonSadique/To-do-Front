@@ -48,6 +48,8 @@ section a  {
     font-weight: bold;
     margin: 15px auto;
     text-transform: uppercase;
+    box-shadow: 1px 1px black;
+    border: 1px 1px black;
     letter-spacing: 1.2px;
     display: block;
 }
@@ -70,7 +72,7 @@ form{
     display: flex;
     flex-wrap: wrap;
     max-width: 90%;
-    margin: 10rem auto;
+    margin: 1rem auto;
 }
 
 
@@ -84,8 +86,10 @@ input {
 }
 
 input:hover{
-    border-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
     border: 1px solid #283048;
+    border-top: unset;
 }
 
 
@@ -99,6 +103,12 @@ button{
     letter-spacing: 1.2px;
     width: 50%;
     margin: 15px auto;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 2px 6px 1rem #39a5cc;
+    background-image: linear-gradient( 0deg,#1b2031, #abbcc2);
 }
 
 form a{

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -15,16 +15,17 @@
         <img src="./assets/checkbox-check-svgrepo-com.svg" alt="logo">
     </header>
     <main>
-        <form id="form">
-            <input type="text", id="username", placeholder="Preencha com o seu nome de utilizador">
-            <input type="password", id="password", placeholder="Preencha com a sua senha">
-            <a href="index.html">Esqueceu a senha?</a>
-            <button id="validationButton">
-                Login
-            </button>
-        </form>
+        <div>
+            <form id="form">
+                <input type="text", id="username", placeholder="Preencha com o seu nome de utilizador">
+                <input type="password", id="password", placeholder="Preencha com a sua senha">
+                <button id="validar">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
     </main>
 
-    <script src="./login.js"></script>
+    <script src="./register.js"></script>
 </body>
 </html>
