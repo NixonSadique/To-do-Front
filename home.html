@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<body>    
+    <main>
+        <div class="sidebar">
+            <a href="#" id="showContainer1">Create List</a>
+            <a href="#" id="showContainer2">Create Tasks</a>
+        </div>        
+        <section>
+
+            <div class="content">
+                <div id="listContainer" class="hidden">
+                    <form>
+                        <input type="text" id="listTitle" placeholder="Write the name of your list">
+                        <input type="text" id="listDescription" placeholder="Description">
+                        <button id="button_novaLista">Criar Lista</button>
+                    </form>
+                </div>
+                <div id="taskContainer" class="hidden">
+                    <form>
+                        <input type="text" id="listTitle" placeholder="Write the name of your task">
+                        <input type="text" id="listDescription" placeholder="Description of task">
+                        <button id="button_novaLista">Criar Lista</button>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+    <script src="./taskList.js"></script>
+</body>
+</html>

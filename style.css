@@ -26,7 +26,16 @@ header img {
     width: 10rem;
 }
 
-main{
+#HomePageLogo {
+    max-width: 10%;
+    margin: 15px auto;
+    text-align: left;
+    padding-right: 15px;
+}
+
+
+
+main {
     max-width: 40rem;
     width: 90%;
     margin: 2rem auto;
@@ -39,11 +48,11 @@ h1 {
 }
 
 
-section a  {
+section a {
     all: unset;
     border-radius: 0.7rem;
     width: 50%;
-    background-image: linear-gradient( 90deg,#283048, #859398);
+    background-image: linear-gradient(90deg, #283048, #859398);
     padding: 1.1rem;
     font-weight: bold;
     margin: 15px auto;
@@ -57,16 +66,16 @@ section a  {
 section a:hover {
     cursor: pointer;
     box-shadow: 2px 6px 2rem #39a5cc;
-    background-image: linear-gradient( 0deg,#1b2031, #abbcc2);
+    background-image: linear-gradient(0deg, #1b2031, #abbcc2);
 }
 
 
-#buttons {
+#indexButtons {
     padding: 1rem;
-    
+
 }
 
-form{
+form {
     text-align: center;
     padding: 32rem auto;
     display: flex;
@@ -76,7 +85,8 @@ form{
 }
 
 
-input {
+input#username,
+input#password {
     all: unset;
     border-bottom: 1px solid#283048;
     width: 90%;
@@ -85,7 +95,7 @@ input {
     padding: 15px;
 }
 
-input:hover{
+input:hover {
     border-bottom-right-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
     border: 1px solid #283048;
@@ -93,10 +103,10 @@ input:hover{
 }
 
 
-button{
+button {
     all: unset;
     border-radius: 0.4rem;
-    background-image: linear-gradient( 290deg,#283048, #859398);
+    background-image: linear-gradient(290deg, #283048, #859398);
     padding: 0.675rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -108,12 +118,43 @@ button{
 button:hover {
     cursor: pointer;
     box-shadow: 2px 6px 1rem #39a5cc;
-    background-image: linear-gradient( 0deg,#1b2031, #abbcc2);
+    background-image: linear-gradient(0deg, #1b2031, #abbcc2);
 }
 
-form a{
+form a {
     width: 100%;
     padding-left: 70%;
 }
 
+.hidden {
+    display: none;
+}
 
+.sidebar {
+    width: 200px;
+    height: 200vh;
+    background-color: #1b2031;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.sidebar a {
+    all: unset;
+    border-radius: 0.5rem;
+    width: 80%;
+    padding: 1rem;
+    font-weight: bold;
+    margin: 10px 0px;
+    position: relative;
+    left: 0;
+    text-transform: uppercase;
+    border-style: solid;
+    border: 1px 1px black;
+    letter-spacing: 1.2px;
+    display: block;
+}

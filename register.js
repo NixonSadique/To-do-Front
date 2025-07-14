@@ -13,7 +13,7 @@ const createUser = async () => {
             username: usernameInput.value, 
             password : passwordInput.value
         })
-    })
+    });
 
     const response = await data.text();
     return response;
