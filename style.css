@@ -132,10 +132,9 @@ form a {
 
 .sidebar {
     width: 200px;
-    height: 200vh;
+    height: 100vh;
     background-color: #1b2031;
     color: white;
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -157,4 +156,26 @@ form a {
     border: 1px 1px black;
     letter-spacing: 1.2px;
     display: block;
+}
+
+#homePageMain{
+    all: unset;
+    display: flex;
+
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input#listTitle, input#listDescription{
+    all: unset;
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 15px auto;
 }

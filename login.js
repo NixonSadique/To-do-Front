@@ -13,7 +13,8 @@ const authenticateLogin = async (event) => {
     try {
         const data = await authenticateUser(username, password);
         localStorage.setItem('token', data.token);
-        localStorage.setItem('userId', data.userId)
+        localStorage.setItem('userId', data.userId);
+        window.location.href = './home.html';
     } catch (error) {
         console.error('Erro ao autenticar o usuario: ', error);
     }
@@ -30,7 +31,7 @@ const authenticateUser = async (username, password) => {
     });
     
     
-    return await data.json();
+    return await response.json();
 }
 
 form.addEventListener('submit', authenticateLogin);

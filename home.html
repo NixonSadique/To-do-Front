@@ -10,16 +10,19 @@
     <title>HomePage</title>
 </head>
 <body>    
-    <main>
-        <div class="sidebar">
+    <main id="homePageMain">
+        <div class="sidebar" id="sidebar">
             <a href="#" id="showContainer1">Create List</a>
-            <a href="#" id="showContainer2">Create Tasks</a>
+            <div id="lista">
+                <h2>Lista de tarefas</h2>
+                <!-- <a href="#" id="createTask">+</a> -->
+            </div>
         </div>        
-        <section>
-
-            <div class="content">
+        <section class="content-area">
+            
+            <div class="content-box">
                 <div id="listContainer" class="hidden">
-                    <form>
+                    <form id="listForm">
                         <input type="text" id="listTitle" placeholder="Write the name of your list">
                         <input type="text" id="listDescription" placeholder="Description">
                         <button id="button_novaLista">Criar Lista</button>
@@ -29,7 +32,8 @@
                     <form>
                         <input type="text" id="listTitle" placeholder="Write the name of your task">
                         <input type="text" id="listDescription" placeholder="Description of task">
-                        <button id="button_novaLista">Criar Lista</button>
+                        <input type="text" id="listDescription" placeholder="Description of task">
+                        <button id="button_novaLista">Criar tarefa</button>
                     </form>
                 </div>
             </div>

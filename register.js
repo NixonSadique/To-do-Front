@@ -24,6 +24,7 @@ const sendForm = async (event) =>{
     try {
         const user = await createUser();
         alert(user);
+        window.location.href = './login.html';
     } catch (error) {
         console.error(error);
     }
