@@ -131,7 +131,7 @@ form a {
 }
 
 .sidebar {
-    width: 200px;
+    width: 12.5rem;
     height: 100vh;
     background-color: #1b2031;
     color: white;
@@ -144,8 +144,9 @@ form a {
 
 .sidebar a {
     all: unset;
+    text-align: center;
     border-radius: 0.5rem;
-    width: 80%;
+    width: 81%;
     padding: 1rem;
     font-weight: bold;
     margin: 10px 0px;
@@ -153,7 +154,7 @@ form a {
     left: 0;
     text-transform: uppercase;
     border-style: solid;
-    border: 1px 1px black;
+    border-color: white;
     letter-spacing: 1.2px;
     display: block;
 }
@@ -175,7 +176,19 @@ input#listTitle, input#listDescription{
     all: unset;
     border: 1px solid #ccc;
     width: 80%;
-    height: 2.5rem;
-    border-radius: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
     margin: 15px auto;
+}
+
+select{
+    width: 50%;
+    text-align: center;
+    margin: 15px auto;
+    border-radius: 1rem;
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid ;
+    background-color: unset;
+    padding: 0.5rem;
 }
