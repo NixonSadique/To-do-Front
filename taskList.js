@@ -71,15 +71,10 @@ const sendForm = async (event) => {
     }
 }
 
-document.getElementById('showContainer1').onclick = () => {
-    const taskContainer = document.getElementById('taskContainer');
-    const isTaskContainerHidden = taskContainer.classList.contains('hidden');
+document.getElementById('showContainer1').onclick = async () => {
+    
+    esconderConteudo();
     const listContainer = document.getElementById('listContainer');
-
-    if (!isTaskContainerHidden) {
-        taskContainer.classList.add('hidden');
-    }
-
     listContainer.classList.remove('hidden');
 
     const listForm = document.getElementById('listForm');
@@ -108,14 +103,14 @@ const addLists = async () => {
 
         sidebar.appendChild(a);
         a.addEventListener('click', (event) =>{
-            esconderCriarLista();
+            esconderConteudo();
             generateContent(lists[i])
         });
     }
 }
 
 const completeTask = async (id) => {
-    await fetch(`${baseTaskUrl}/complete/${id}`, {
+    const response = await fetch(`${baseTaskUrl}/complete/${id}`, {
         method: 'PUT',
         headers: { 'Authorization': 'Bearer ' + token }
     });
@@ -163,6 +158,9 @@ const generateContent = async (taskList) => {
     contentBox.appendChild(div);
 
     console.log('tasksInList', tasksInList.length)
+    
+    const form = document.createElement('form');
+    form.id = 'checkboxForm';
 
     for (let i = 0; i < tasksInList.length; i++) {
         //alocacao dos dados do objeto de tareda i em variaveis
@@ -185,9 +183,10 @@ const generateContent = async (taskList) => {
         task.textContent = message + "\nPriority: " + priority;
 
         //adicionar as tarefas a div
-        
-        div.appendChild(checkbox);
-        div.appendChild(task);
+
+        form.appendChild(checkbox)
+        form.appendChild(task)
+        div.appendChild(form);
 
         checkbox.addEventListener('click', (event) =>{
             event.preventDefault();
@@ -199,26 +198,31 @@ const generateContent = async (taskList) => {
 }
 
 
-esconderCriarLista =  () => {
-    const listContainer = document.getElementById('listContainer');
-    const isListContainerHidden = listContainer.classList.contains('hidden');
+const esconderConteudo =  () => {
     const taskContainer = document.getElementById('taskContainer');
-
-    console.log("estou aQUIWE PORRAS")
-    if (!isListContainerHidden) {
-        listContainer.classList.add('hidden')
+    const isTaskContainerHidden = taskContainer.classList.contains('hidden');
+    if (!isTaskContainerHidden) {
+        taskContainer.classList.add('hidden');
     }
-}
-
-document.getElementById('createTask').onclick = () => {
     
     const listContainer = document.getElementById('listContainer');
     const isListContainerHidden = listContainer.classList.contains('hidden');
-    const taskContainer = document.getElementById('taskContainer');
-
     if (!isListContainerHidden) {
         listContainer.classList.add('hidden')
     }
+    
+
+    const checkboxContainer = document.getElementById('checkboxContainer');
+    if (checkboxContainer != null ) {
+        checkboxContainer.remove();
+    }
+    
+}
+
+document.getElementById('createTask').onclick = () => {
+    esconderConteudo();
+    addLists();
+    const taskContainer = document.getElementById('taskContainer');
     taskContainer.classList.remove('hidden')
 
 }
