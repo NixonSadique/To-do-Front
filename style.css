@@ -1,3 +1,12 @@
+:root {
+    --text: #060c11;
+    --background: #f1f6fb;
+    --primary: #3881cd;
+    --secondary: #8ebae8;
+    --accent: #5d9fe4;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +14,9 @@
 }
 
 body {
-    background-image: linear-gradient(#d7dde8, #757f9a);
+    background-image: linear-gradient(var(--secondary), var(--background));
     background-repeat: no-repeat;
-    background-color: #757f9a;
+    background-color: var(--background);
 }
 
 body * {
@@ -45,7 +54,7 @@ main {
 h1 {
     font-weight: 850;
     letter-spacing: 2px;
-    font-size:2em;
+    font-size: 2em;
     margin: 0.1rem;
     text-align: center;
     padding: 1rem;
@@ -54,29 +63,30 @@ h1 {
 
 section a {
     all: unset;
+    font-size: 1em;
+    text-align: center;
     border-radius: 0.7rem;
     width: 50%;
-    background-image: linear-gradient(90deg, #283048, #859398);
+    background-color: var(--primary);
     padding: 1.1rem;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 15px auto;
     text-transform: uppercase;
-    box-shadow: 1px 1px black;
-    border: 1px 1px black;
     letter-spacing: 1.2px;
+    box-shadow: 1px 1px 1px var(--text);
     display: block;
 }
 
 section a:hover {
     cursor: pointer;
-    box-shadow: 2px 6px 2rem #39a5cc;
-    background-image: linear-gradient(0deg, #1b2031, #abbcc2);
+    box-shadow: 1px 1px 12px var(--secondary);
+    background-color: var(--accent);
+
 }
 
 
 #indexButtons {
     padding: 1rem;
-
 }
 
 form {
@@ -92,42 +102,39 @@ form {
 input#username,
 input#password {
     all: unset;
-    border-bottom: 1px solid#283048;
+    border: 1px solid var(--text);
     width: 90%;
-    max-width: 32rem;
-    margin: 1rem;
-    padding: 15px;
-}
-
-input:hover {
-    border-bottom-right-radius: 0.7rem;
-    border-bottom-left-radius: 0.7rem;
-    border: 1px solid #283048;
-    border-top: unset;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    margin: 15px auto;
 }
 
 
 button {
     all: unset;
-    border-radius: 0.4rem;
-    background-image: linear-gradient(290deg, #283048, #859398);
-    padding: 0.675rem;
-    font-weight: bold;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    padding: 0.7rem;
+    font-weight: bolder;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.3px;
     width: 50%;
     margin: 15px auto;
+    box-shadow: 1px 1px 1px var(--text);
+    font-size: 1.2em;
 }
 
 button:hover {
     cursor: pointer;
-    box-shadow: 2px 6px 1rem #39a5cc;
-    background-image: linear-gradient(0deg, #1b2031, #abbcc2);
+    box-shadow: 1px 1px 12px var(--secondary);
+    background-color: var(--accent);
+
 }
 
-form a {
-    width: 100%;
-    padding-left: 70%;
+#senhaEsquecida {
+    width: 100%; 
+    margin-left: 70%;
+    margin: 10px 0px 10px 70%;
 }
 
 .hidden {
@@ -137,35 +144,43 @@ form a {
 .sidebar {
     width: 12.5rem;
     height: 100vh;
-    background-color: #1b2031;
-    color: white;
+    background-color: var(--primary);
+    color: var(--text);
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     padding: 0px;
     position: relative;
+    box-shadow: 1px 0px 12px var(--accent) ;
     overflow-y: auto;
 }
 
 .sidebar a {
     all: unset;
     text-align: center;
-    border-radius: 0.5rem;
+    border-radius: 0.1rem;
+    background-color: var(--accent);
     width: 81%;
     padding: 1rem;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 10px 0px;
     position: relative;
     left: 0;
     text-transform: uppercase;
     border-style: solid;
-    border-color: white;
+    border-color: var(--accent);
     letter-spacing: 1.2px;
     display: block;
 }
 
-#homePageMain{
+.sidebar a:hover {
+    cursor: pointer;
+    background-color: var(--accent);
+
+}
+
+#homePageMain {
     all: unset;
     display: flex;
 
@@ -179,41 +194,64 @@ form a {
     overflow-y: auto;
 }
 
-input#listTitle, input#listDescription{
+input#listTitle,
+input#listDescription {
     all: unset;
-    border: 1px solid #ccc;
+    border: 1px solid var(--text);
     width: 80%;
     padding: 0.6rem;
     border-radius: 1rem;
     margin: 15px auto;
 }
 
-select{
+input#listId,
+input#taskName {
+    all: unset;
+    border: 1px solid var(--text);
+    width: 80%;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    margin: 15px auto;
+}
+
+select {
     width: 50%;
     text-align: center;
     margin: 15px auto;
     border-radius: 1rem;
     border-width: 1px;
-    border-color: #ccc;
-    border-style: solid ;
+    border-color: var(--text);
+    border-style: solid;
     background-color: unset;
     padding: 0.5rem;
 }
 
 #checkboxContainer {
-  padding: 1rem;
+    padding: 1rem;
+    margin: 15px auto;
+}
 
-  margin: 15px auto;
-
+label{
+    width: 100%;
+    text-wrap: wrap;
 }
 
 div p {
-  margin: 5px auto;
-  text-align: center;
-  max-width: 60%;
-  text-wrap: wrap;
+    margin: 5px auto;
+    text-align: center;
+    max-width: 65%;
+    text-wrap: wrap;
 }
 
-#checkboxForm{
-    max-width: 80%;
+#checkboxForm {
+    max-width: 65%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+h2:hover {
+    cursor: pointer;
 }

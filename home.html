@@ -13,9 +13,10 @@
     <main id="homePageMain">
         <div class="sidebar" id="sidebar">
             <a href="#" id="showContainer1">Create List</a>
+            <a href="#" id="createTask" >+</a>
             <div id="lista">
-                <h2>Lista de tarefas</h2>
-                <a href="#" id="createTask">+</a>
+                <h2 id="listarTarefas">Lista de tarefas ⌄</h2>
+                
             </div>
         </div>        
         <section class="content-area">
@@ -29,9 +30,9 @@
                     </form>
                 </div>
                 <div id="taskContainer" class="hidden">
-                    <form>
-                        <input type="text" id="listTitle" placeholder="Write the name of your task">
-                        <input type="text" id="listDescription" placeholder="Description of task">
+                    <form id="taskForm">
+                        <input type="text" id="listId" placeholder="Write the ID of the list">
+                        <input type="text" id="taskName" placeholder="Write the name of your task">
                         <select name="priorities" id="priority" >
                             <option value="NONE">None</option>
                             <option value="LOW">Low</option>
@@ -45,10 +46,6 @@
             
         </section>
     </main>
-    <footer>
-        
-    </footer>
-
     <script src="./taskList.js"></script>
 </body>
 </html>
